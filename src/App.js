@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import ReactDOM from 'react-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+class App extends React.Component {
+
+  render() {
+    return  <div className="Timer">
+      <div className="clock">
+   <h1>00 :</h1>
+   <h1>30 :</h1>
+   <h1>00</h1>
+   </div>
+   <div class="Unit">
+   <span>Hour</span>
+   <span>Minute</span>
+   <span>Seconds</span>
+   </div>
+   
     </div>
-  );
+  }
+
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
+ export default App()
